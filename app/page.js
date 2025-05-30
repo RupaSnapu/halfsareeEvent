@@ -51,19 +51,6 @@ export default function HalfSareePhotography() {
         </div>
       </section>
 
-      {/* Internal Navigation */}
-      <div className="bg-white shadow-sm sticky top-16 z-40">
-        <div className="container mx-auto px-6 py-3 overflow-x-auto">
-          <div className="flex space-x-8">
-            <a href="#about" className="whitespace-nowrap text-gray-700 hover:text-indigo-600">About Half Saree</a>
-            <a href="#gallery" className="whitespace-nowrap text-gray-700 hover:text-indigo-600">Our Gallery</a>
-            <a href="#locations" className="whitespace-nowrap text-gray-700 hover:text-indigo-600">Locations</a>
-            <a href="#process" className="whitespace-nowrap text-gray-700 hover:text-indigo-600">Our Process</a>
-            <a href="#faq" className="whitespace-nowrap text-gray-700 hover:text-indigo-600">FAQs</a>
-          </div>
-        </div>
-      </div>
-
       {/* About Section */}
       <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-6">
