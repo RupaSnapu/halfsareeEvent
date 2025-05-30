@@ -1,19 +1,15 @@
-import Head from 'next/head';
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
+import HeroImageShow from './componets/heroimgshow';
+
 
 export default function HalfSareePhotography() {
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <Head>
-        <title>Half Saree Photography UK | Traditional Indian Dress Photoshoot London</title>
-        <meta name="description" content="Professional half saree photography services across UK. Specializing in Indian traditional dress photoshoots in London, West Midlands, and all regions. Book your South Indian saree photoshoot today." />
-        <meta name="keywords" content="half saree photography UK, half saree photoshoot London, Indian traditional dress photography, South Indian saree photoshoot UK, half saree photography near me, affordable half saree photographers, outdoor half saree photoshoot UK" />
-        <link rel="canonical" href="https://yourdomain.com/half-saree-photography" />
-      </Head>
-
-      {/* Navigation Bar */}
-      <nav className="bg-white shadow-lg sticky top-0 z-50">
+           <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-7">
@@ -22,7 +18,7 @@ export default function HalfSareePhotography() {
               </Link>
             </div>
             <div className="hidden md:flex items-center space-x-1">
-              <Link href="/" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Home</Link>
+              <Link href="/" className="py-4 px-2 text-gray-700 hover:text-yellow-600 transition duration-300">Home</Link>
               <Link href="#services" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Services</Link>
               <Link href="/gallery" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Gallery</Link>
               <Link href="#packages" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Packages</Link>
@@ -40,19 +36,10 @@ export default function HalfSareePhotography() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative bg-indigo-900 text-white py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Half Saree Photography UK</h1>
-          <p className="text-xl md:text-2xl mb-8">Capturing the Elegance of Indian Tradition in the Heart of London & Across UK</p>
-          <Link href="./contact" className="bg-white text-indigo-800 font-bold py-3 px-8 rounded-full hover:bg-indigo-100 transition duration-300">
-            Book Your Photoshoot
-          </Link>
-        </div>
-      </section>
+           <HeroImageShow/>
 
-      {/* About Section */}
-      <section id="about" className="py-16 bg-white">
+
+          {/* <section id="about" className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-8 md:mb-0">
@@ -79,7 +66,48 @@ export default function HalfSareePhotography() {
             </div>
           </div>
         </div>
+      </section> */}
+      
+      {/* Hero Section */}
+      <section className="relative bg-indigo-900 text-white py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Half Saree Photography UK</h1>
+          <p className="text-xl md:text-2xl mb-8">Capturing the Elegance of Indian Tradition in the Heart of London & Across UK</p>
+          <Link href="./contact" className="bg-white text-indigo-800 font-bold py-3 px-8 rounded-full hover:bg-indigo-100 transition duration-300">
+            Book Your Photoshoot
+          </Link>
+        </div>
       </section>
+
+      {/* About Section */}
+      {/* <section id="about" className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-8 md:mb-0">
+              <Image 
+                src="/imag2.jpg" 
+                alt="Traditional Half Saree Photography in UK" 
+                width={600} 
+                height={400}
+                className="rounded-lg shadow-xl"
+                priority
+              />
+            </div>
+            <div className="md:w-1/2 md:pl-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Traditional Half Saree Photoshoots in UK</h2>
+              <p className="text-gray-600 mb-4">
+                Half saree, also known as 'Langa Voni' or 'Pavada Davani', is a beautiful South Indian traditional attire typically worn by teenage girls during special occasions. Our photography services specialize in capturing the elegance and cultural significance of this attire.
+              </p>
+              <p className="text-gray-600 mb-4">
+                Whether you're looking for an outdoor photoshoot in London's iconic locations or a studio session in West Midlands, we bring professional expertise to create stunning images that preserve your cultural heritage.
+              </p>
+              <p className="text-gray-600">
+                We serve clients across UK including Scotland, Yorkshire, and Northern Ireland, offering both traditional and contemporary styles of half saree photography.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> */}
 
       {/* Gallery Section */}
       <section id="gallery" className="py-16 bg-gray-100">
