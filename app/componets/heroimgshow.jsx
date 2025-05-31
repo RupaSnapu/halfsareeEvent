@@ -2,12 +2,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
 const photos = [
   { src: "/imag2.jpg", alt: "Traditional Half Saree Photography 1" },
   { src: "/out.jpg", alt: "Traditional Half Saree Photography 2" },
   { src: "/pic1.jpg", alt: "Traditional Half Saree Photography 3" },
+  { src: "/pic2.jpg", alt: "Traditional Half Saree Photography 4" },
 ];
 
 const textLines = [
@@ -131,49 +133,77 @@ export default function HeroImageShow() {
                   />
                 </motion.div>
               </AnimatePresence>
+                         <div className="flex justify-between items-center mt-6 px-4">
+      {[
+        { dir: "prev", Icon: ChevronLeftIcon, handler: prevPhoto },
+        { dir: "next", Icon: ChevronRightIcon, handler: nextPhoto },
+      ].map(({ dir, Icon, handler }) => {
+        const isPrev = dir === "prev";
+        return (
+          <button
+            key={dir}
+            onClick={handler}
+            aria-label={isPrev ? "Previous photo" : "Next photo"}
+            type="button"
+            className="
+              relative 
+              w-12 h-12                  /* 48×48px circle */
+              bg-white                   /* white background */
+              rounded-full               /* perfectly circular */
+              flex items-center justify-center 
+              shadow-md                  /* soft shadow */
+              hover:shadow-lg            /* stronger shadow on hover */
+              transition 
+              focus:outline-none
+            "
+          >
+            {/* 1) Light gradient ring behind the icon */}
+            <svg
+              className="absolute inset-0 w-full h-full"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              {/* Slightly transparent track circle */}
+              <circle
+                cx="24"
+                cy="24"
+                r="22"
+                stroke="url(#ringGradient)"
+                strokeWidth="4"
+                strokeOpacity="0.2"
+              />
+              {/* Animated progress ring */}
+              <motion.circle
+                cx="24"
+                cy="24"
+                r="22"
+                stroke="url(#ringGradient)"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeDasharray={138}
+                strokeDashoffset={138 * (1 - (isPrev ? 0 : timerPercent))}
+                animate={{ strokeDashoffset: 138 * (1 - (isPrev ? 0 : timerPercent)) }}
+                transition={{ ease: "linear" }}
+              />
+              <defs>
+                <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#6366F1" />    {/* indigo-500 */}
+                  <stop offset="100%" stopColor="#A78BFA" />  {/* purple-300 */}
+                </linearGradient>
+              </defs>
+            </svg>
 
-              {/* BUTTONS */}
-              <div className="flex justify-between items-center mt-6 px-4">
-                {["prev", "next"].map((dir) => {
-                  const isPrev = dir === "prev";
-                  const handler = isPrev ? prevPhoto : nextPhoto;
-                  return (
-                    <button
-                      key={dir}
-                      onClick={handler}
-                      aria-label={isPrev ? "Previous photo" : "Next photo"}
-                      className="relative bg-gray-300 hover:bg-indigo-600 hover:text-white rounded-full p-4 shadow-lg transition-transform focus:outline-none"
-                      type="button"
-                    >
-                      <span className="text-2xl font-bold select-none" style={{ lineHeight: 0 }}>
-                        {isPrev ? "‹" : "›"}
-                      </span>
-                      <svg
-                        className="absolute -inset-1 w-12 h-12"
-                        viewBox="0 0 48 48"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <circle cx="24" cy="24" r="22" stroke="#4f46e5" strokeOpacity="0.2" strokeWidth="4" />
-                        <motion.circle
-                          cx="24"
-                          cy="24"
-                          r="22"
-                          stroke="#4f46e5"
-                          strokeWidth="4"
-                          strokeLinecap="round"
-                          strokeDasharray={138}
-                          strokeDashoffset={138 * (1 - (isPrev ? 0 : timerPercent))}
-                          animate={{ strokeDashoffset: 138 * (1 - (isPrev ? 0 : timerPercent)) }}
-                          transition={{ ease: "linear" }}
-                        />
-                      </svg>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+            {/* 2) Chevron Icon (left or right) */}
+            <Icon className="w-6 h-6 text-indigo-600 hover:text-indigo-700" />
+          </button>
+        );
+      })}
+    </div>
+
+
+</div>
 
             {/* TEXT */}
             <div className="md:w-1/2 text-center md:text-left">

@@ -1,39 +1,58 @@
 export default function Locations() {
-    return(<>
-     <section id="locations" className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Service Areas Across UK</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-700">London & Southeast</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>Half saree photography London</li>
-                <li>Outdoor locations in Royal Parks</li>
-                <li>Studio sessions in Central London</li>
-                <li>Cultural heritage locations</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-700">Midlands & North</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>Half saree photography West Midlands</li>
-                <li>Half saree photoshoot East Midlands</li>
-                <li>Traditional Indian photography Yorkshire</li>
-                <li>Urban and rural locations</li>
-              </ul>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-700">Scotland & Northern Ireland</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>Indian dress photography Scotland</li>
-                <li>Saree photoshoot Northern Ireland</li>
-                <li>Historic castle backgrounds</li>
-                <li>Scenic highland locations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+  return (
+    <section id="locations" className="py-16 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">
+          Our Service Areas Across UK
+        </h2>
 
-    </>)
+        {/* 👇 2 columns on mobile, 3 columns on md and up */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          {[
+            {
+              title: "London & Southeast",
+              items: [
+                "Half saree photography London",
+                "Outdoor locations in Royal Parks",
+                "Studio sessions in Central London",
+                "Cultural heritage locations",
+              ],
+            },
+            {
+              title: "Midlands & North",
+              items: [
+                "Half saree photography West Midlands",
+                "Half saree photoshoot East Midlands",
+                "Traditional Indian photography Yorkshire",
+                "Urban and rural locations",
+              ],
+            },
+            {
+              title: "Scotland & Northern Ireland",
+              items: [
+                "Indian dress photography Scotland",
+                "Saree photoshoot Northern Ireland",
+                "Historic castle backgrounds",
+                "Scenic highland locations",
+              ],
+            },
+          ].map((location, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+            >
+              <h3 className="text-sm md:text-xl font-semibold text-indigo-700 mb-3">
+                {location.title}
+              </h3>
+              <ul className="space-y-1 text-gray-600 text-xs md:text-sm">
+                {location.items.map((item, i) => (
+                  <li key={i}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
