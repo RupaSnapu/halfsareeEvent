@@ -15,7 +15,7 @@ return(<>
                   <Link href="/#services" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Services</Link>
                   <Link href="/#gallery" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Gallery</Link>
                   <Link href="#packages" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Packages</Link>
-                  <Link href="/about" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">About</Link>
+                  <Link href="/#About" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">About</Link>
                   <Link href="/#Contact" className="py-4 px-2 text-gray-700 hover:text-indigo-600 transition duration-300">Contact</Link>
                 </div>
                 <div className="md:hidden flex items-center">

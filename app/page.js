@@ -9,6 +9,7 @@ import Services from './componets/Services';
 import Locations from './componets/Locations';
 import Contact from './componets/Contact';
 import Footer from './componets/footer';
+import WhyChooseUs from './componets/About';
 
 
 export default function HalfSareePhotography() {
@@ -22,6 +23,7 @@ export default function HalfSareePhotography() {
         <Services/>
         <Plans/>
         <Locations/>
+        <WhyChooseUs/>
         <Contact/>
       {/* CTA Section */}
       <section className="py-16 bg-indigo-900 text-white">
