@@ -12,18 +12,18 @@ export default function Footer() {
               <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
-                <li><Link href="/services" className="text-gray-400 hover:text-white">Services</Link></li>
-                <li><Link href="/gallery" className="text-gray-400 hover:text-white">Gallery</Link></li>
-                <li><Link href="/packages" className="text-gray-400 hover:text-white">Packages</Link></li>
+                <li><Link href="/#services" className="text-gray-400 hover:text-white">Services</Link></li>
+                <li><Link href="/#gallery" className="text-gray-400 hover:text-white">Gallery</Link></li>
+                <li><Link href="/#packages" className="text-gray-400 hover:text-white">Packages</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><Link href="/half-saree-photography" className="text-gray-400 hover:text-white">Half Saree Photography</Link></li>
-                <li><Link href="/family-photography" className="text-gray-400 hover:text-white">Family Photography</Link></li>
-                <li><Link href="/traditional-photography" className="text-gray-400 hover:text-white">Traditional Photography</Link></li>
-                <li><Link href="/event-photography" className="text-gray-400 hover:text-white">Event Photography</Link></li>
+                <li><Link href="/#half-saree-photography" className="text-gray-400 hover:text-white">Half Saree Photography</Link></li>
+                <li><Link href="/#family-photography" className="text-gray-400 hover:text-white">Family Photography</Link></li>
+                <li><Link href="/#traditional-photography" className="text-gray-400 hover:text-white">Traditional Photography</Link></li>
+                <li><Link href="/#event-photography" className="text-gray-400 hover:text-white">Event Photography</Link></li>
               </ul>
             </div>
             <div>
