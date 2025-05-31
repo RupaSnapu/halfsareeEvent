@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
@@ -7,7 +7,7 @@ import { motion, AnimatePresence, useAnimation } from "framer-motion";
 const photos = [
   { src: "/imag2.jpg", alt: "Traditional Half Saree Photography 1" },
   { src: "/out.jpg", alt: "Traditional Half Saree Photography 2" },
-  { src: "/img1.jpg", alt: "Traditional Half Saree Photography 3" },
+  { src: "/pic1.jpg", alt: "Traditional Half Saree Photography 3" },
 ];
 
 const textLines = [
@@ -81,7 +81,7 @@ export default function HeroImageShow() {
     }),
   };
 
-  return (
+  return (<>
     <section id="about" className="py-16 bg-white select-none">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-10">
@@ -185,5 +185,15 @@ export default function HeroImageShow() {
         </div>
       </div>
     </section>
+<section className="relative bg-indigo-900 text-white py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Half Saree Photography UK</h1>
+          <p className="text-xl md:text-2xl mb-8">Capturing the Elegance of Indian Tradition in the Heart of London & Across UK</p>
+          <Link href="./contact" className="bg-white text-indigo-800 font-bold py-3 px-8 rounded-full hover:bg-indigo-100 transition duration-300">
+            Book Your Photoshoot
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
