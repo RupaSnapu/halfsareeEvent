@@ -654,7 +654,7 @@ export default function Plans() {
                   } bg-white`}
                 >
                   {plan.popular && (
-                    <div className="absolute top-2 right-4 md:top-4 md:right-2 flex items-center justify-center z-20 w-[20px] h-[20px] md:w-12 md:h-12 2xl:w-20 2xl:h-20">
+                    <div className="absolute top-2 right-4 md:top-4 md:right-2 flex items-center justify-center z-20 w-[50px] h-[50px] md:w-14 md:h-14 2xl:w-[50px] 2xl:h-[50px]">
                       <div className="absolute inset-0 rounded-full border-2 border-dashed border-green-500 animate-spin-slow-reverse shadow-md shadow-green-400/50"></div>
                       <div className="absolute inset-0 rounded-full border-2 border-green-300 animate-spin-slow shadow-green-300/50"></div>
                       <div className="absolute z-10 bg-green-550 text-white font-bold text-[4px] md:text-[9px] 2xl:text-[8px] px-2 md:px-3 py-1 rounded-full text-center animate-pulse leading-tight whitespace-nowrap">
