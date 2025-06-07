@@ -127,9 +127,10 @@ function AnimatedFeature({ feature }) {
       <h3 className="text-base sm:text-xl font-semibold text-gray-800 leading-snug">
         {feature.title}
       </h3>
-      <p className="text-xs sm:text-sm text-gray-600">
-        {feature.description}
-      </p>
+<p className="text-xl p-5 sm:text-sm text-gray-600">
+  {feature.description}
+</p>
+
     </motion.div>
   );
 }
