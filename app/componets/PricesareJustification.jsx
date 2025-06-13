@@ -256,7 +256,7 @@ export default function WhyWeExcel() {
     },
     {
       icon: <CameraIcon className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16 text-rose-800" />,
-      title: 'Luxury Cinematic Output',
+      title: 'Luxury-Cinematic-Output',
       desc: 'Magazine-style edits delivered in high resolution.',
     },
     {
