@@ -749,7 +749,7 @@ export default function Contact() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center mb-16">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#4B0082] mb-4 font-serif">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#4B0082] mb-4 font-serif">
             Contact Our Half-Saree Photographers
           </h1>
           <p className="text-gray-700 text-lg">

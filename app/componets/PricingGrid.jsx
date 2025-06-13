@@ -1,5 +1,3 @@
-
-
 // 'use client';
 
 // import { motion } from 'framer-motion';
@@ -110,7 +108,7 @@
 //         </motion.p>
 
 //         <motion.div
-//           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+//           className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8"
 //           variants={containerVariants}
 //           initial="hidden"
 //           whileInView="show"
@@ -120,16 +118,16 @@
 //             <motion.div
 //               key={title}
 //               variants={cardVariants}
-//               className="bg-white p-6 rounded-xl border border-transparent hover:border-rose-600 shadow-md hover:shadow-lg transition-all duration-300"
+//               className="bg-white p-6 rounded-xl border border-transparent hover:border-[#9c0329] shadow-md hover:shadow-lg transition-all duration-300"
 //             >
 //               <div className="flex items-center gap-3 mb-4">
-//                 <Icon className="w-6 h-6 text-rose-600" />
-//                 <h3 className="text-lg sm:text-xl font-semibold text-rose-700">{title}</h3>
+//                 <Icon className="w-6 h-6 text-[#9c0329]" />
+//                 <h3 className="text-lg sm:text-xl font-semibold text-black">{title}</h3>
 //               </div>
 //               <ul className="space-y-3 text-sm sm:text-base text-gray-700">
 //                 {items.map((item, idx) => (
 //                   <li key={idx} className="flex items-start gap-2">
-//                     <span className="mt-0.5 text-rose-600">↳</span>
+//                     <span className="mt-0.5 text-[#9c0329]">↳</span>
 //                     <span>{item}</span>
 //                   </li>
 //                 ))}
@@ -141,6 +139,8 @@
 //     </section>
 //   );
 // }
+
+
 
 
 'use client';
@@ -233,13 +233,13 @@ const cardVariants = {
 
 export default function PricingGrid() {
   return (
-    <section className="bg-red-50 text-gray-800 py-20 px-6 sm:px-10 lg:px-24">
-      <div className="max-w-full mt-[-60px] mx-auto">
+    <section className="bg-red-50 text-gray-800 py-16 px-4 sm:px-6 md:px-10 lg:px-20">
+      <div className="max-w-full mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold text-black text-center mb-6"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black text-center mb-4"
         >
           Understanding Our Pricing
         </motion.h2>
@@ -247,13 +247,13 @@ export default function PricingGrid() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-lg sm:text-xl text-center max-w-2xl mx-auto mb-14 text-gray-700"
+          className="text-sm sm:text-base md:text-lg text-center max-w-2xl mx-auto mb-12 text-gray-700"
         >
           A transparent breakdown of what makes our Half Saree Photography exceptional across the UK.
         </motion.p>
 
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -263,13 +263,17 @@ export default function PricingGrid() {
             <motion.div
               key={title}
               variants={cardVariants}
-              className="bg-white p-6 rounded-xl border border-transparent hover:border-[#9c0329] shadow-md hover:shadow-lg transition-all duration-300"
+              className="bg-white p-4 sm:p-6 rounded-xl border border-transparent hover:border-[#9c0329] shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <Icon className="w-6 h-6 text-[#9c0329]" />
-                <h3 className="text-lg sm:text-xl font-semibold text-black">{title}</h3>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-red-100 flex items-center justify-center">
+                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#9c0329]" />
+                </div>
+                <h3 className="text-xs sm:text-lg md:text-xl font-semibold text-black">
+                  {title}
+                </h3>
               </div>
-              <ul className="space-y-3 text-sm sm:text-base text-gray-700">
+              <ul className="space-y-2 text-xs sm:text-sm md:text-base text-gray-700">
                 {items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="mt-0.5 text-[#9c0329]">↳</span>

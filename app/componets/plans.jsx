@@ -1152,6 +1152,194 @@
 //       `}</style>
 //     </>
 //   );
+// // }
+
+// import Link from "next/link";
+
+// export default function Plans() {
+//   return (
+//     <>
+//       <section id="packages" className="py-12 mt-[-40px] md:py-16 bg-[#fdecef]">
+//         <div className="mx-auto px-4 md:px-6 2xl:max-w-[1600px]">
+//           <h2 className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold text-[#9c0329] text-center mb-8 md:mb-12">
+//             Half Saree Photography Packages
+//           </h2>
+
+//           <p className="text-center text-[#9c0329] text-xs md:text-base 2xl:text-xl max-w-3xl mx-auto mb-8 md:mb-12">
+//             Affordable pricing options for every need. All packages include high-resolution edited images with print release.
+//           </p>
+
+//           <div className="max-w-6xl mx-auto">
+//             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 items-stretch">
+//               {[
+//                 {
+//                   name: "Basic",
+//                   price: "£199",
+//                   popular: false,
+//                   color: "bg-[#fdecef]",
+//                   features: [
+//                     "1 hour photoshoot",
+//                     "15 high-resolution edited images",
+//                     "1 outfit change",
+//                     "Studio or outdoor location",
+//                     "makeup artist",
+//                     "printed photos",
+//                   ],
+//                 },
+//                 {
+//                   name: "Premium",
+//                   price: "£349",
+//                   popular: true,
+//                   color: "bg-gradient-to-br from-[#9c0329] to-[#61021b]",
+//                   textColor: "text-white",
+//                   features: [
+//                     "2 hour photoshoot",
+//                     "30 high-resolution edited images",
+//                     "2 outfit changes",
+//                     "Studio + outdoor locations",
+//                     "Professional makeup artist",
+//                     "5 printed 6x4 photos",
+//                   ],
+//                 },
+//                 {
+//                   name: "Deluxe",
+//                   price: "£499",
+//                   popular: false,
+//                   color: "bg-[#fdecef]",
+//                   features: [
+//                     "3 hour photoshoot",
+//                     "50 high-resolution edited images",
+//                     "3 outfit changes",
+//                     "Multiple locations",
+//                     "Professional makeup & hair styling",
+//                     "10 printed photos + 1 framed 8x10",
+//                     "Online gallery with shareable link",
+//                   ],
+//                 },
+//               ].map((plan, idx) => (
+//                 <div
+//                   key={idx}
+//                   className={`flex flex-col rounded-xl shadow-lg overflow-hidden transform transition duration-300 md:hover:-translate-y-1 ${
+//                     plan.popular ? "border-2 border-[#9c0329] relative" : ""
+//                   } bg-white`}
+//                 >
+//                   {plan.popular && (
+//                     <div className="absolute top-[1px] right-[2px] md:top-[10px] md:right-4 flex items-center justify-center z-10 w-8 h-8 md:w-18 md:h-18">
+//                       <div className="absolute inset-0 rounded-full border-2 border-dashed border-[#FFD700] animate-spin-slow-reverse shadow-md shadow-[#9c0329]/30"></div>
+//                       <div className="w-[18px] h-[18px] md:w-[60px] md:h-[60px] rounded-full border-2 border-[#9c0329] animate-spin-slow shadow-[#9c0329]/30"></div>
+//                       <div className="absolute flex items-center justify-center inset-0 z-10 bg-[#9c0329] text-white font-bold text-[6px] md:text-[8px] px-1 md:px-2 py-[1px] md:py-1 rounded-full text-center animate-pulse leading-tight whitespace-nowrap">
+//                         Most Popular
+//                       </div>
+//                     </div>
+//                   )}
+
+//                   <div className={`${plan.color} py-4 px-5 md:py-6 md:px-8`}>
+//                     <h3
+//                       className={`text-lg md:text-xl 2xl:text-2xl font-bold text-center ${
+//                         plan.textColor || "text-[#9c0329]"
+//                       }`}
+//                     >
+//                       {plan.name}
+//                     </h3>
+//                     <div className="text-center mt-2 md:mt-4">
+//                       <span
+//                         className={`text-2xl md:text-4xl 2xl:text-5xl font-bold ${
+//                           plan.textColor || "text-black"
+//                         }`}
+//                       >
+//                         {plan.price}
+//                       </span>
+//                       <span
+//                         className={`text-xs md:text-base 2xl:text-lg ${
+//                           plan.textColor ? "text-white/70" : "text-[#9c0329]"
+//                         }`}
+//                       >
+//                         /session
+//                       </span>
+//                     </div>
+//                   </div>
+
+//                     <div className="p-4 md:p-8 2xl:p-10 flex flex-col flex-grow">
+//                       <ul className="space-y-2 md:space-y-4 2xl:space-y-5 flex-grow">
+//                         {plan.features.map((feature, i) => {
+//                           const isUnavailable = 
+//                             (!plan.popular && i >= 7) || 
+//                             (plan.name === "Basic" && ["Makeup artist", "Printed photos"].includes(feature));
+
+//                           return (
+//                             <li key={i} className={`flex items-start ${isUnavailable ? "text-[#9c0329]/40" : ""}`}>
+//                               {!isUnavailable ? (
+//                                 <svg className="w-4 h-4 md:w-5 md:h-5 2xl:w-6 2xl:h-6 text-[#9c0329] mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+//                                 </svg>
+//                               ) : (
+//                                 <span className="w-4 h-4 md:w-5 md:h-5 2xl:w-6 2xl:h-6 mr-2 mt-0.5 flex-shrink-0"></span>
+//                               )}
+//                               <span className="text-xs md:text-sm 2xl:text-base">{feature}</span>
+//                             </li>
+//                           );
+//                         })}
+
+//                       </ul>
+//                       <div className="mt-4 md:mt-8 text-center">
+//                         <Link
+//                           href="#Contact"
+//                           className="inline-block bg-gradient-to-br from-[#9c0329] to-[#61021b] text-white font-bold py-2 px-3 md:py-3 md:px-6 2xl:py-4 2xl:px-8 rounded-lg hover:text-black hover:bg-rose-200 transition duration-300 w-full text-xs md:text-base 2xl:text-lg"
+//                         >
+//                           Book Now
+//                         </Link>
+//                       </div>
+//                     </div>
+//                 </div>
+//               ))}
+//             </div>
+
+//             <div className="mt-8 md:mt-12 2xl:mt-16 bg-white rounded-lg shadow-md p-4 md:p-8 2xl:p-12">
+//               <h3 className="text-lg md:text-2xl 2xl:text-3xl font-bold text-center text-[#9c0329] mb-4 md:mb-6">
+//                 Custom Packages Available
+//               </h3>
+//               <p className="text-[#9c0329] text-center text-xs md:text-base 2xl:text-lg mb-4 md:mb-6">
+//                 Have special requirements? We offer custom packages for large families, events, and commercial needs.
+//               </p>
+//               <div className="text-center">
+//                 <Link
+//                   href="#Contact"
+//                   className="inline-block bg-gradient-to-br from-[#9c0329] to-[#61021b] text-white font-bold py-2 px-3 md:py-3 md:px-6 2xl:py-4 2xl:px-8 rounded-lg hover:text-black hover:bg-rose-200 transition duration-300 text-xs md:text-base 2xl:text-lg"
+//                 >
+//                   Request Custom Package
+//                 </Link>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <style jsx>{`
+//         @keyframes spin {
+//           0% {
+//             transform: rotate(0deg);
+//           }
+//           100% {
+//             transform: rotate(360deg);
+//           }
+//         }
+//         @keyframes spin-reverse {
+//           0% {
+//             transform: rotate(0deg);
+//           }
+//           100% {
+//             transform: rotate(-360deg);
+//           }
+//         }
+//         .animate-spin-slow {
+//           animation: spin 6s linear infinite;
+//         }
+//         .animate-spin-slow-reverse {
+//           animation: spin-reverse 10s linear infinite;
+//         }
+//       `}</style>
+//     </>
+//   );
 // }
 
 import Link from "next/link";
@@ -1182,8 +1370,8 @@ export default function Plans() {
                     "15 high-resolution edited images",
                     "1 outfit change",
                     "Studio or outdoor location",
-                    "No makeup artist",
-                    "No printed photos",
+                    "makeup artist",
+                    "printed photos",
                   ],
                 },
                 {
@@ -1261,31 +1449,41 @@ export default function Plans() {
 
                   <div className="p-4 md:p-8 2xl:p-10 flex flex-col flex-grow">
                     <ul className="space-y-2 md:space-y-4 2xl:space-y-5 flex-grow">
-                      {plan.features.map((feature, i) => (
-                        <li
-                          key={i}
-                          className={`flex items-start ${
-                            !plan.popular && i >= 4 ? "text-[#9c0329]/40" : ""
-                          }`}
-                        >
-                          <svg
-                            className={`w-4 h-4 md:w-5 md:h-5 2xl:w-6 2xl:h-6 ${
-                              !plan.popular && i >= 4 ? "text-[#9c0329]/40" : "text-[#9c0329]"
-                            } mr-2 mt-0.5 flex-shrink-0`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
+                      {plan.features.map((feature, i) => {
+                        const isUnavailable =
+                          plan.name === "Basic" &&
+                          ["makeup artist", "printed photos"].includes(
+                            feature.toLowerCase()
+                          );
+
+                        return (
+                          <li
+                            key={i}
+                            className={`flex items-start ${
+                              isUnavailable ? "text-[#9c0329]/40" : ""
+                            }`}
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                          <span className="text-xs md:text-sm 2xl:text-base">{feature}</span>
-                        </li>
-                      ))}
+                            {!isUnavailable ? (
+                              <svg
+                                className="w-4 h-4 md:w-5 md:h-5 2xl:w-6 2xl:h-6 text-[#9c0329] mr-2 mt-0.5 flex-shrink-0"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth="2"
+                                  d="M5 13l4 4L19 7"
+                                />
+                              </svg>
+                            ) : (
+                              <span className="w-4 h-4 md:w-5 md:h-5 2xl:w-6 2xl:h-6 mr-2 mt-0.5 flex-shrink-0"></span>
+                            )}
+                            <span className="text-xs md:text-sm 2xl:text-base">{feature}</span>
+                          </li>
+                        );
+                      })}
                     </ul>
                     <div className="mt-4 md:mt-8 text-center">
                       <Link
