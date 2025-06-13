@@ -256,7 +256,7 @@ export default function WhyWeExcel() {
     },
     {
       icon: <CameraIcon className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16 text-rose-800" />,
-      title: 'Luxury-Cinematic-Output',
+      title: 'Luxury Cinematic Output',
       desc: 'Magazine-style edits delivered in high resolution.',
     },
     {
@@ -295,12 +295,12 @@ export default function WhyWeExcel() {
               ></div>
 
               {/* Inner Card */}
-              <div className="relative z-10 w-[88%] h-[88%] rounded-full bg-gradient-to-br from-rose-100 via-white to-rose-50 shadow-lg flex flex-col items-center justify-center text-center px-2 py-2 group-hover:scale-105 transition-transform duration-300">
+              <div className="relative z-10 w-[90%] h-[90%] rounded-full bg-gradient-to-br from-rose-100 via-white to-rose-50 shadow-lg flex flex-col items-center justify-center text-center px-2 py-2 group-hover:scale-105 transition-transform duration-300">
                 <div className="mt-[-30px]">{item.icon}</div>
-                <h3 className="text-sm sm:text-[12px] lg:text-lg 2xl:text-xl font-semibold text-black mb-2">
+                <h3 className="text-[11px] sm:text-[12px] lg:text-lg 2xl:text-xl font-semibold text-black mb-2">
                   {item.title}
                 </h3>
-                <p className="text-[10px] sm:text-[10px] lg:text-[15px] 2xl:text-lg text-gray-800">
+                <p className="text-[8px] sm:text-[10px] lg:text-[15px] 2xl:text-lg text-gray-800">
                   {item.desc}
                 </p>
               </div>
