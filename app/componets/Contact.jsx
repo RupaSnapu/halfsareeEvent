@@ -883,7 +883,7 @@ export default function Contact() {
                     <FaWhatsapp className="text-lg" />
                     WhatsApp Us
                   </Link>
-                  <Link href="https://wa.me/447933223422" target="_blank" className="text-white bg-[#25D366] hover:bg-[#1DA851] font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
+                  <Link href="https://wa.me/447933223422" target="_blank" className="text-white bg-blue-500 hover:bg-blue-700 font-semibold py-2 px-4 rounded-lg inline-flex items-center gap-2">
                     <FaPhoneAlt className="text-sm" />
                     Call Us
                   </Link>
