@@ -114,7 +114,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div>
             <h3 className="text-xl md:text-2xl font-semibold mb-3 text-[#8b0000] font-serif">
-              Your Photography
+              SnapU Photography
             </h3>
             <p className="text-sm md:text-base leading-relaxed">
               Capturing life’s precious moments with artistic excellence across the UK.
@@ -185,10 +185,10 @@ export default function Footer() {
               Contact
             </h3>
             <address className="not-italic grid grid-cols-2 md:grid-cols-1 gap-y-1 gap-x-4 text-sm md:text-base">
-              <p>123 Photography Studio</p>
+              <p>Snapu Photography Studio</p>
               <p>London, UK</p>
               <p>Phone: +44 123 456 7890</p>
-              <p>Email: info@yourphotography.com</p>
+              <p>Email: info@snapuphotography.com</p>
             </address>
           </div>
         </div>
@@ -196,7 +196,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#ccc] mt-6 pt-4 text-center">
           <p className="text-xs md:text-sm">
-            &copy; {new Date().getFullYear()} Your Photography. All rights reserved.
+            &copy; {new Date().getFullYear()} SnapU Photography. All rights reserved.
           </p>
         </div>
       </div>

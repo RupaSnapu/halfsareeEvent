@@ -45,7 +45,9 @@ export default function NavBar() {
             {/* <span className={`${dancingScript.className} font-bold`}>
               SnapU Photography
             </span> */}
-            <span className='text-blue-400'>Snap U Photography</span>
+           <span className="bg-gradient-to-r from-[#0066ff] to-[#8b0000] bg-clip-text text-transparent inline-block">
+  Snap U Photography
+</span>
           </Link>
 
           {/* Desktop Nav */}
